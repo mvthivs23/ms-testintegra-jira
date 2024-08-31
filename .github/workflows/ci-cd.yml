@@ -14,7 +14,7 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven cloud
-      run:  mvn -B verify sonar:sonar -Dsonar.projectKey=mvthivs23_ms-testintegra-jira -Dsonar.organization=mvthivs23 -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=$SONARCLOUDTOKEN
+      run:  mvn -B verify sonar:sonar -Dsonar.projectKey=ms-testintegra-jira -Dsonar.organization=mvthivs23 -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=$SONARCLOUDTOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONARCLOUDTOKEN: ${{ secrets.SONARCLOUDTOKEN }}
